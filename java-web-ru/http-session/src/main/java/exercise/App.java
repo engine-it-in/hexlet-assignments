@@ -13,6 +13,7 @@ public final class App {
         var app = Javalin.create(config -> {
             config.plugins.enableDevLogging();
         });
+
         // BEGIN
         app.get("/users", ctx->{
             var page = ctx.queryParamAsClass("page", Integer.class).getOrDefault(1);
